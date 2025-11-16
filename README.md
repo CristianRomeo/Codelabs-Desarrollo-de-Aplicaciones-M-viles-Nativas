@@ -1,24 +1,24 @@
-# Codelab 1: Mi Primera App en Android (Happy Birthday)
+# Codelab 1: Mi Primera App en Android
 
-Este proyecto es el resultado del primer codelab del curso de Android Basics con Compose. El objetivo era crear una aplicación de tarjeta de felicitación de cumpleaños muy simple.
-
-La aplicación consta de una sola pantalla que muestra un mensaje de "¡Feliz cumpleaños!" y una firma, con un formato y alineación específicos.
+Es una aplicación "Tarjeta de Felicitación" (Greeting Card) muy simple, diseñada para introducir los conceptos fundamentales del desarrollo de UI moderno en Android.
 
 ## Aspectos Interesantes del Ejercicio
+Este primer codelab fue una introducción práctica a Jetpack Compose. Los puntos más destacados que se aprendieron fueron:
 
-Siguiendo la pauta del ejercicio, aquí están los aspectos que me parecieron más interesantes y los conceptos clave aprendidos:
+**Funciones `@Composable`:**
+El núcleo de Compose son las funciones anotadas con @Composable. Aprendimos que:
+Son las "piezas de construcción" de la UI (como Greeting()). Deben tener la primera letra en mayúscula (por convención). Se pueden llamar desde otras funciones @Composable.
 
-* **Introducción a Jetpack Compose:** Este fue el primer contacto real con el framework de UI declarativo de Android. Es un cambio de paradigma frente al antiguo sistema de Vistas basado en XML. La UI se describe como una función de los datos (en este caso, texto estático).
+**El poder del `@Preview`:**
+Esta es una de las herramientas más potentes para el desarrollo de UI. Al anotar una función Composable (como GreetingPreview()) con @Preview, podemos ver cómo se renderiza ese componente directamente en el panel de diseño de Android Studio.
 
-* **Funciones `@Composable`:** Comprendimos que la UI se construye anidando pequeñas funciones marcadas con la anotación `@Composable`. En este ejercicio, creamos nuestra propia función `GreetingText()` y utilizamos la que viene por defecto, `Text()`.
+Esto acelera enormemente el ciclo de desarrollo, ya que no es necesario compilar y ejecutar la aplicación completa en un emulador o dispositivo físico para ver cada pequeño cambio visual.
 
-* **El poder del `@Preview`:** La anotación `@Preview` es increíblemente útil. Permite ver los cambios de la UI en tiempo real directamente en el editor de Android Studio, sin necesidad de compilar y ejecutar la app en un emulador o dispositivo. Esto acelera el ciclo de desarrollo de forma masiva.
+**Layouts y `Modifiers`:**
+Descubrimos los **Modifiers** (`Modifier`) como la herramienta principal para decorar o modificar los Composables. Usamos `Modifier.padding()` para añadir espacio, `Modifier.fillMaxSize()` para que la columna ocupe toda la pantalla, y `Modifier.align()` para alinear la firma a la derecha.
 
-* **Layouts y `Modifiers`:**
-    * Aprendimos a usar el Composable `Column` para organizar elementos de forma vertical (el saludo encima de la firma).
-    * Descubrimos los **Modifiers** (`Modifier`) como la herramienta principal para decorar o modificar los Composables. Usamos `Modifier.padding()` para añadir espacio, `Modifier.fillMaxSize()` para que la columna ocupe toda la pantalla, y `Modifier.align()` para alinear la firma a la derecha.
-
-* **Estilo de Texto:** Vimos qué fácil es aplicar estilo al texto, como el tamaño de la fuente (`fontSize`), la altura de línea (`lineHeight`) y la alineación del texto (`textAlign`).
+**Estilo de Texto:**
+Vimos qué fácil es aplicar estilo al texto, como el tamaño de la fuente (`fontSize`), la altura de línea (`lineHeight`) y la alineación del texto (`textAlign`).
 
 ## Tecnologías Utilizadas
 
