@@ -4,7 +4,7 @@ Este proyecto es el resultado del primer codelab del curso de Android Basics con
 
 La aplicación consta de una sola pantalla que muestra un mensaje de "¡Feliz cumpleaños!" y una firma, con un formato y alineación específicos.
 
-## 🚀 Aspectos Interesantes del Ejercicio
+## Aspectos Interesantes del Ejercicio
 
 Siguiendo la pauta del ejercicio, aquí están los aspectos que me parecieron más interesantes y los conceptos clave aprendidos:
 
@@ -20,7 +20,7 @@ Siguiendo la pauta del ejercicio, aquí están los aspectos que me parecieron m�
 
 * **Estilo de Texto:** Vimos qué fácil es aplicar estilo al texto, como el tamaño de la fuente (`fontSize`), la altura de línea (`lineHeight`) y la alineación del texto (`textAlign`).
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 * Android Studio
 * Kotlin
