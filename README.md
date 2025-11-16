@@ -20,6 +20,44 @@ Descubrimos los **Modifiers** (`Modifier`) como la herramienta principal para de
 **Estilo de Texto:**
 Vimos qué fácil es aplicar estilo al texto, como el tamaño de la fuente (`fontSize`), la altura de línea (`lineHeight`) y la alineación del texto (`textAlign`).
 
+# Codelab 3: Tarjeta de Presentación en Compose
+
+Un proyecto simple del Codelab de Android Basics que enseña conceptos clave de Jetpack Compose.
+
+## Aspectos Interesantes del Ejercicio
+Este primer codelab fue una introducción práctica a Jetpack Compose. Los puntos más destacados que se aprendieron fueron:
+
+**El truco de Modifier.weight(1f)**
+Para lograr que un bloque esté centrado y otro esté fijo abajo, usamos un Column y weight.
+
+* La Column principal ocupa toda la pantalla.
+* El bloque de Logo (arriba) usa Modifier.weight(1f).
+* El bloque de Contacto (abajo) no usa weight.
+
+Resultado: El Logo ocupa todo el espacio sobrante del centro y empuja automáticamente al Contacto a la parte inferior.
+
+**Reutilizar código con Composables:**
+En lugar de repetir el código para el teléfono, email, etc., creamos una función reutilizable llamada ContactRow.
+
+```kotlin
+// Se define una sola vez
+@Composable
+fun ContactRow(icon: ImageVector, text: String) {
+    Row(...) {
+        Icon(imageVector = icon, ...)
+        Text(text = text)
+    }
+}
+
+// ...y luego se usa las veces que quieras
+ContactRow(icon = Icons.Default.Phone, text = "123...")
+ContactRow(icon = Icons.Default.Email, text = "a@b.com")
+```
+
+**Iconos de Material Design:**
+No es necesario descargar imágenes de iconos. Simplemente añadimos una dependencia en Gradle y podemos usar la biblioteca de Icons de Material Design directamente.
+
+
 ## Tecnologías Utilizadas
 
 * Android Studio
